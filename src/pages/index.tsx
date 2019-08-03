@@ -1,5 +1,6 @@
 import { graphql } from "gatsby"
-import { Heading, Box } from "rebass"
+import { Heading, Flex, Box } from "rebass"
+import Logo from "../components/Logo"
 import Link from "../components/Link"
 
 import React from "react"
@@ -10,13 +11,11 @@ const home = ({
   },
 }) => (
   <Box>
-    <Heading textAlign="center" fontSize={5}>
-      ⠺⠢⠃ webanytime
-    </Heading>
-    <Heading textAlign="center" fontSize={3}>
+    <Logo />
+    <Heading textAlign="center" fontSize={3} lineHeight={"50px"}>
       web architecture and development solutions
     </Heading>
-    <div>
+    <Flex>
       {edges.map(edge => {
         const {
           node: {
@@ -26,25 +25,29 @@ const home = ({
         } = edge
 
         return (
-          <Link key={route} to={route}>
-            {title}
-          </Link>
+          <Box key={route} width={1 / edges.length}>
+            <Link to={route}>{title}</Link>
+          </Box>
         )
       })}
-    </div>
+    </Flex>
   </Box>
 )
 
 export const pageQuery = graphql`
   query PagesQuery {
-    allMdx {
+    allMdx(filter: { frontmatter: { type: { eq: "page" } } }) {
       edges {
         node {
+          parent {
+            id
+          }
           fields {
             route
           }
           frontmatter {
             title
+            type
           }
         }
       }

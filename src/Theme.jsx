@@ -13,6 +13,7 @@ export const theme = {
     white: "#EEEEEE",
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
+  // lineHeights: [1, "22px"],
   shadows: {
     small: "0 0 4px rgba(0, 0, 0, .125)",
     large: "0 0 24px rgba(0, 0, 0, .125)",
@@ -20,10 +21,6 @@ export const theme = {
 }
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    font-size: calc(1vw + 1vh + .5vmin);
-  }
-
   @font-face {
     font-family: system;
     font-style: normal;
@@ -32,9 +29,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    font: 1em/1.6 "system";
-    background-color: #222831;
-    color: #EEEEEE;
+    font-family: "system";
+    background-color: ${theme.colors.black};
+    color: ${theme.colors.white};
+  }
+
+  a[href]:not([class]) {
+    color: ${theme.colors.blue};
+    text-decoration: underline;
   }
 `
 

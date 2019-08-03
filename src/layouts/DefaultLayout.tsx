@@ -2,7 +2,6 @@ import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import React from "react"
 import { Box, Flex } from "rebass"
 import { Link, graphql } from "gatsby"
-import { Sans, Serif } from "components/ui/Typography"
 import { NavTree } from "components/NavTree"
 
 export default function DocsLayout(props) {
@@ -19,14 +18,12 @@ export default function DocsLayout(props) {
     <Flex>
       <Box mr="20px">
         <Box mb="20px">
-          <Link to="/">
-            <Sans>Home</Sans>
-          </Link>
+          <Link to="/">Home</Link>
         </Box>
         <NavTree />
       </Box>
       <Box p={2}>
-        <Serif size="8">{title}</Serif>
+        {title}
         <MDXRenderer>{code.body}</MDXRenderer>
       </Box>
     </Flex>

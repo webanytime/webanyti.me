@@ -1,48 +1,55 @@
-import { graphql, Link, StaticQuery } from "gatsby"
+import { graphql } from "gatsby"
+import { Heading, Box } from "rebass"
+import Link from "../components/Link"
+
 import React from "react"
 
-export default function Home() {
-  return (
-    <StaticQuery
-      query={graphql`
-        query PagesQuery {
-          allMdx {
-            edges {
-              node {
-                fields {
-                  route
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
+const home = ({
+  data: {
+    allMdx: { edges },
+  },
+}) => (
+  <Box>
+    <Heading textAlign="center" fontSize={5}>
+      ⠺⠢⠃ webanytime
+    </Heading>
+    <Heading textAlign="center" fontSize={3}>
+      web architecture and development solutions
+    </Heading>
+    <div>
+      {edges.map(edge => {
+        const {
+          node: {
+            fields: { route },
+            frontmatter: { title },
+          },
+        } = edge
+
+        return (
+          <Link key={route} to={route}>
+            {title}
+          </Link>
+        )
+      })}
+    </div>
+  </Box>
+)
+
+export const pageQuery = graphql`
+  query PagesQuery {
+    allMdx {
+      edges {
+        node {
+          fields {
+            route
+          }
+          frontmatter {
+            title
           }
         }
-      `}
-      render={data => {
-        return (
-          <div>
-            <h1>Page Index</h1>
-            <div>
-              {data.allMdx.edges.map((edge, index) => {
-                const {
-                  node: {
-                    fields: { route },
-                    frontmatter: { title },
-                  },
-                } = edge
+      }
+    }
+  }
+`
 
-                return (
-                  <div key={index}>
-                    <Link to={route}>{title}</Link>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        )
-      }}
-    />
-  )
-}
+export default home

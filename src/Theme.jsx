@@ -1,24 +1,40 @@
 // @ts-check
-
-/**
- * Since this file is shared with NetlifyCMS it must be .jsx
- */
-
 import React, { Fragment } from "react"
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
 import { Button } from "rebass"
 
 export const theme = {
-  // TODO: https://rebassjs.org/theming
+  breakpoints: ["40em", "52em", "64em"],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  colors: {
+    black: "#222831",
+    grey: "#393e46",
+    blue: "#00C6CF",
+    white: "#EEEEEE",
+  },
+  space: [0, 4, 8, 16, 32, 64, 128, 256],
+  shadows: {
+    small: "0 0 4px rgba(0, 0, 0, .125)",
+    large: "0 0 24px rgba(0, 0, 0, .125)",
+  },
 }
 
 const GlobalStyle = createGlobalStyle`
-  html, body {
-    font-family: Arial, Helvetica, sans-serif;
+  :root {
+    font-size: calc(1vw + 1vh + .5vmin);
   }
 
-  h3 {
-    font-family: Arial, Helvetica, sans-serif
+  @font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  }
+
+  html, body {
+    font: 1em/1.6 "system";
+    background-color: #222831;
+    color: #EEEEEE;
   }
 `
 

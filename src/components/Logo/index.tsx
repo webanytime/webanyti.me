@@ -4,7 +4,7 @@ import { theme } from "../../Theme"
 
 const Logo = ({ className }: { className?: any }) => (
   <h1 className={className}>
-    ⠺⠢⠃
+    ⠺⠑⠃
     <br />
     webanytime
   </h1>

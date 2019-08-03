@@ -14,5 +14,5 @@ export default styled(Logo)`
   text-align: center;
   font-size: ${theme.fontSizes[5]}px;
   line-height: 22px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 `

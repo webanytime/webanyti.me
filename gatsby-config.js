@@ -61,8 +61,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "mdx",
-        path: `${__dirname}/content/mdx/`,
+        name: "pages",
+        path: `${__dirname}/content/pages/`,
       },
     },
     "gatsby-plugin-catch-links",

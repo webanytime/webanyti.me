@@ -12,7 +12,7 @@ const Logo = ({ className }: { className?: any }) => (
 
 export default styled(Logo)`
   text-align: center;
-  font-size: ${theme.fontSizes[5]}px;
+  font-size: ${theme.fontSizes[6]}px;
   line-height: 22px;
   margin-bottom: 10px;
 `

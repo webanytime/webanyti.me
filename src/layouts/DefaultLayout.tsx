@@ -1,8 +1,9 @@
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import React from "react"
-import { Box, Flex } from "rebass"
+import { Box, Flex, Heading } from "rebass"
 import { graphql } from "gatsby"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 export default function DocsLayout(props) {
   const {
@@ -17,16 +18,19 @@ export default function DocsLayout(props) {
   return (
     <>
       <Header />
-      <Flex
-        css={{
-          paddingTop: "20px",
-        }}
-      >
-        <Box p={2}>
-          {title}
+      <Flex alignItems="center">
+        <Box
+          width={3 / 4}
+          css={{
+            margin: "0 auto",
+            paddingTop: 30,
+          }}
+        >
+          <Heading>{title}</Heading>
           <MDXRenderer>{code.body}</MDXRenderer>
         </Box>
       </Flex>
+      <Footer />
     </>
   )
 }

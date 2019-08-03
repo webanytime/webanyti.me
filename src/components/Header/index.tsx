@@ -6,7 +6,7 @@ import Link from "../Link"
 const Header = () => (
   <Link to={"/"} removeUnderline>
     <Logo />
-    <Heading textAlign="center" fontSize={3}>
+    <Heading textAlign="center" fontSize={4}>
       web architecture and development solutions
     </Heading>
   </Link>

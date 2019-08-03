@@ -5,7 +5,7 @@ import { Button } from "rebass"
 
 export const theme = {
   breakpoints: ["40em", "52em", "64em"],
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  fontSizes: [10, 12, 14, 16, 20, 24, 32, 48],
   colors: {
     black: "#222831",
     grey: "#393e46",
@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "system";
     background-color: ${theme.colors.black};
     color: ${theme.colors.white};
+    margin: 0;
   }
 
   a[href]:not([class]) {

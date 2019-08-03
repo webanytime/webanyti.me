@@ -12,7 +12,7 @@ const Link = ({
   to: string
   children: ReactNode
   className?: any
-  removeUnderline: boolean
+  removeUnderline?: boolean
 }) => (
   <Box color="white">
     <GatsbyLink to={to} className={className}>

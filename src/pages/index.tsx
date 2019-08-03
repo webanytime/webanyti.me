@@ -1,6 +1,6 @@
 import { graphql } from "gatsby"
-import { Heading, Flex, Box } from "rebass"
-import Logo from "../components/Logo"
+import { Box } from "rebass"
+import Header from "../components/Header"
 import Link from "../components/Link"
 
 import React from "react"
@@ -10,12 +10,18 @@ const home = ({
     allMdx: { edges },
   },
 }) => (
-  <Box>
-    <Logo />
-    <Heading textAlign="center" fontSize={3} lineHeight={"50px"}>
-      web architecture and development solutions
-    </Heading>
-    <Flex>
+  <Box
+    css={{
+      paddingTop: "30vh",
+    }}
+  >
+    <Header />
+    <Box
+      css={{
+        paddingTop: "20px",
+        textAlign: "center",
+      }}
+    >
       {edges.map(edge => {
         const {
           node: {
@@ -23,14 +29,13 @@ const home = ({
             frontmatter: { title },
           },
         } = edge
-
         return (
-          <Box key={route} width={1 / edges.length}>
-            <Link to={route}>{title}</Link>
-          </Box>
+          <Link key={route} to={route}>
+            {title}
+          </Link>
         )
       })}
-    </Flex>
+    </Box>
   </Box>
 )
 

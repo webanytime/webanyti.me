@@ -2,7 +2,6 @@ import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import React from "react"
 import { Box, Flex } from "rebass"
 import { Link, graphql } from "gatsby"
-import { NavTree } from "components/NavTree"
 
 export default function DocsLayout(props) {
   const {
@@ -20,7 +19,6 @@ export default function DocsLayout(props) {
         <Box mb="20px">
           <Link to="/">Home</Link>
         </Box>
-        <NavTree />
       </Box>
       <Box p={2}>
         {title}

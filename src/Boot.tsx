@@ -22,6 +22,7 @@ export const Boot: React.SFC<{ element: any }> = ({ element }) => {
           <meta name="og:url" content={"https://webanyti.me"} />
           <meta name="og:image" content="http://webanyti.me/favicon.ico" />
           <meta name="og:description" content={description} />
+          <link rel="canonical" href="https://webanyti.me" />
         </Helmet>
         <Theme>{element}</Theme>
       </MDXProvider>

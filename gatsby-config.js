@@ -4,9 +4,9 @@ const playgroundHastPlugin = require("./src/utils/playgroundHastPlugin")
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter",
-    description: "-- placeholder --",
-    author: "damassi.pappas@gmail.com",
+    title: "Webanytime Limited",
+    description: "web architecture and development solutions",
+    author: "contact@webanyti.me",
   },
   plugins: [
     {
@@ -68,5 +68,6 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-typescript",
+    "gatsby-plugin-react-helmet",
   ],
 }

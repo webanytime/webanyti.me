@@ -69,5 +69,15 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-typescript",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-netlify",
+      options: {
+        headers: {
+          "/*": [
+            "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+          ],
+        },
+      },
+    },
   ],
 }

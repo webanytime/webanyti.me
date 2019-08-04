@@ -2,6 +2,7 @@ import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import React from "react"
 import { Box, Flex, Heading } from "rebass"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
@@ -10,13 +11,22 @@ export default function DocsLayout(props) {
     data: {
       mdx: {
         code,
-        frontmatter: { title },
+        frontmatter: { title, description },
       },
     },
   } = props
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Webanytime - {title}</title>
+        <meta name="description" content={description} />
+        <meta name="og:title" content={`Webanytime - ${title}`} />
+        <meta name="og:url" content={"https://webanyti.me"} />
+        <meta name="og:image" content="http://webanyti.me/favicon.ico" />
+        <meta name="og:description" content={description} />
+      </Helmet>
       <Header />
       <Flex alignItems="center">
         <Box

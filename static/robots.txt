@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /harming/humans
+Disallow: /ignoring/human/orders/except/first/law
+Disallow: /harm/to/self/except/first/two/laws
+Sitemap: https://webanyti.me/sitemap.xml

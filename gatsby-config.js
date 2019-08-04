@@ -7,6 +7,7 @@ module.exports = {
     title: "Webanytime Limited",
     description: "web architecture and development solutions",
     author: "contact@webanyti.me",
+    siteUrl: "https://webanyti.me",
   },
   plugins: [
     {
@@ -79,5 +80,6 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-sitemap",
   ],
 }

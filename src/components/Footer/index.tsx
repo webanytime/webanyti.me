@@ -1,18 +1,8 @@
 import React from "react"
-import styled from "styled-components"
-import { theme } from "../../Theme"
 import { Box, Text } from "rebass"
 
 const Footer = () => (
-  <Box
-    css={{
-      position: "fixed",
-      bottom: 0,
-    }}
-    bg="black"
-    width="100%"
-    p={20}
-  >
+  <Box bg="black" width="100%" p={20}>
     <Text fontSize={0} textAlign="center">
       webanytime limited | registered in england 🇬🇧 | company number: 12131488
     </Text>
@@ -23,6 +13,4 @@ const Footer = () => (
   </Box>
 )
 
-export default styled(Footer)`
-  color: ${theme.colors.white};
-`
+export default Footer

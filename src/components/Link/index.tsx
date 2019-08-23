@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
-import { Box } from "rebass"
 import { theme } from "../../Theme"
 
 const Link = ({
@@ -14,11 +13,9 @@ const Link = ({
   className?: any
   removeUnderline?: boolean
 }) => (
-  <Box color="white">
-    <GatsbyLink to={to} className={className}>
-      {children}
-    </GatsbyLink>
-  </Box>
+  <GatsbyLink to={to} className={className}>
+    {children}
+  </GatsbyLink>
 )
 
 export default styled(Link)`

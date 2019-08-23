@@ -1,7 +1,9 @@
 // @ts-check
 import React, { Fragment } from "react"
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
-import { Button } from "rebass"
+import { Button, Flex, Box } from "rebass"
+import BigText from "components/BigText"
+import Slides from "components/Slides"
 
 export const theme = {
   breakpoints: ["40em", "52em", "64em"],
@@ -52,6 +54,10 @@ export const LayoutComponents = {
 
 export const UIComponents = {
   Button: props => <Button {...props}>{props.children}</Button>,
+  Flex: props => <Flex {...props}>{props.children}</Flex>,
+  Box: props => <Box {...props}>{props.children}</Box>,
+  BigText: props => <BigText {...props}>{props.children}</BigText>,
+  Slides: props => <Slides {...props}>{props.children}</Slides>,
 }
 
 export const Theme = ({ children }) => (

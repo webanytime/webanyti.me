@@ -1,72 +1,31 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { Box } from "rebass"
+import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import Header from "../components/Header"
-import Link from "../components/Link"
 import Footer from "../components/Footer"
 
-const Home = props => {
-  const [opacity, setOpacity] = useState<number>(0)
-  useEffect(() => {
-    setOpacity(100)
-  })
-  const {
-    data: {
-      allMdx: { edges },
-    },
-  } = props
-  return (
-    <Box
-      css={{
-        transition: "all 1.5s ease",
-        opacity,
-      }}
-    >
-      <Box
-        css={{
-          paddingTop: "30vh",
-        }}
-      >
-        <Header />
-        <Box
-          css={{
-            textAlign: "center",
-          }}
-        >
-          {edges.map(edge => {
-            const {
-              node: {
-                fields: { route },
-                frontmatter: { title },
-              },
-            } = edge
-            return (
-              <Link key={route} to={route}>
-                {title}
-              </Link>
-            )
-          })}
-        </Box>
-      </Box>
-      <Footer />
+const Home = ({ data: { home } }) => (
+  <Box p={5}>
+    <Header />
+    <Box>
+      <MDXRenderer>{home.edges[0].node.code.body}</MDXRenderer>
     </Box>
-  )
-}
+    <Footer />
+  </Box>
+)
 
 export const pageQuery = graphql`
-  query PagesQuery {
-    allMdx(filter: { frontmatter: { type: { eq: "page" } } }) {
+  {
+    home: allMdx(filter: { frontmatter: { type: { eq: "home" } } }) {
       edges {
         node {
-          parent {
-            id
-          }
-          fields {
-            route
-          }
+          id
           frontmatter {
             title
-            type
+          }
+          code {
+            body
           }
         }
       }

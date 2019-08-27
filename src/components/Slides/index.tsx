@@ -20,6 +20,7 @@ const Slides = ({
       <Box
         css={{
           flex: 1,
+          width: "100%",
         }}
         key={child}
       >

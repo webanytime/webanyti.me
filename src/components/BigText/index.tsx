@@ -1,24 +1,32 @@
 import React, { ReactNode } from "react"
+import { Heading } from "rebass"
 import styled from "styled-components"
 
 const BigText = ({
   className,
   children,
+  py,
 }: {
   className?: any
   children: ReactNode
-}) => <h3 className={className}>{children}</h3>
+  py: number
+}) => (
+  <Heading
+    className={className}
+    fontSize={5}
+    m={0}
+    fontWeight="lighter"
+    lineHeight={1.8}
+    fontFamily="mono"
+    py={py}
+  >
+    {children}
+  </Heading>
+)
 
 export default styled(BigText)`
-  font-size: 24px;
-  margin: 0;
-  font-weight: lighter;
-  line-height: 40px;
-  font-family: mono;
-  font-style: italic;
-
   > strong {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #393e46;
     padding: 5px 10px;
   }
 `

@@ -4,6 +4,8 @@ import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
 import { Button, Flex, Box } from "rebass"
 import BigText from "components/BigText"
 import Slides from "components/Slides"
+import Steps from "components/Steps"
+import ContactForm from "components/ContactForm"
 
 export const theme = {
   breakpoints: ["40em", "52em", "64em"],
@@ -15,7 +17,6 @@ export const theme = {
     white: "#EEEEEE",
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
-  // lineHeights: [1, "22px"],
   shadows: {
     small: "0 0 4px rgba(0, 0, 0, .125)",
     large: "0 0 24px rgba(0, 0, 0, .125)",
@@ -58,6 +59,8 @@ export const UIComponents = {
   Box: props => <Box {...props}>{props.children}</Box>,
   BigText: props => <BigText {...props}>{props.children}</BigText>,
   Slides: props => <Slides {...props}>{props.children}</Slides>,
+  Steps: props => <Steps {...props}>{props.children}</Steps>,
+  ContactForm: props => <ContactForm {...props}>{props.children}</ContactForm>,
 }
 
 export const Theme = ({ children }) => (

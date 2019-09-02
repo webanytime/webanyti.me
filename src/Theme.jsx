@@ -2,10 +2,10 @@
 import React, { Fragment } from "react"
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
 import { Button, Flex, Box } from "rebass"
-import BigText from "components/BigText"
-import Slides from "components/Slides"
-import Steps from "components/Steps"
-import ContactForm from "components/ContactForm"
+import BigText from "./components/BigText"
+import Slides from "./components/Slides"
+import Steps from "./components/Steps"
+import ContactForm from "./components/ContactForm"
 
 export const theme = {
   breakpoints: ["40em", "52em", "64em"],

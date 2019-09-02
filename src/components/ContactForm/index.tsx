@@ -46,7 +46,6 @@ const ContactForm = ({
         </Box>
       </Flex>
     </Box>
-    <Box flex={1}>This is where a map should go</Box>
   </Flex>
 )
 

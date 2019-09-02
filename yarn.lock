@@ -1071,6 +1071,14 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-native@*":
+  version "0.60.10"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.60.10.tgz#cd227c95d04368c896d35eb3ae4cf8d7ad92407f"
+  integrity sha512-5GUyxt1w0fJ/xVKzOP1Sulce+I074ItIJW7nkwC/0Au5saUeVm1KwyEH2NaP2BUciEqZJSlRAdwOXrTScojzRQ==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.7.20":
   version "16.7.20"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.20.tgz#13ae752c012710d0fa800985ca809814b51d3b58"
@@ -1079,12 +1087,23 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/rebass@^0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-0.3.4.tgz#2179ef25311d8d12af42bb5a69420121c4678c5b"
-  integrity sha512-IVx8iJxhGuPrzZqXYWCyt7HyRHg4HAQiRr8CdF4AnDyXxQulVCfoKcj4wtI4kTBRKUWsS7HH2cFz9GRziiW9Fw==
+"@types/rebass@0.0.0":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-3.0.4.tgz#c21ef30895d857a3bb0822084440739f448159d6"
+  integrity sha512-qTR46x+9niOIxOZJ/R0voBKes2YQb2wndC7kMLDuQ9baRB+3RO04tKF90y9jt/bEvD1gIMPaAsuKN/zqrekZOw==
   dependencies:
     "@types/react" "*"
+    "@types/styled-components" "*"
+    "@types/styled-system" "*"
+
+"@types/styled-components@*":
+  version "4.1.18"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.18.tgz#348804fe5a399ae0a46550afaf030085815ad931"
+  integrity sha512-VrHkgvjbxQXOw0xWSUckusUUZ4y/jqN1u7kF29ngh0oE6uOrlZHleTgqeUqylQqHQIeQ8MxFb50BRHy8ju5DHg==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    csstype "^2.2.0"
 
 "@types/styled-components@^4.1.6":
   version "4.1.6"
@@ -1094,6 +1113,13 @@
     "@types/node" "*"
     "@types/react" "*"
     csstype "^2.2.0"
+
+"@types/styled-system@*":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.1.tgz#22eff9e4b2f89cd2222c15053f8c11be5ec9c357"
+  integrity sha512-RAF9Erif51vbD1ZbIiGN4ZrgxpSr44iMXrPjQK5+tI7PWLDugKepTWj7T/LqG5VfaYYIrEmOCzIpulhv+/D/XQ==
+  dependencies:
+    csstype "^2.6.4"
 
 "@types/tmp@^0.0.32":
   version "0.0.32"
@@ -4116,6 +4142,11 @@ csstype@^2.2.0, csstype@^2.5.2:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.1.tgz#4cfbf637a577497036ebcd7e32647ef19a0b8076"
   integrity sha512-wv7IRqCGsL7WGKB8gPvrl+++HlFM9kxAM6jL1EXNPNTshEJYilMkbfS2SnuHha77uosp/YVK0wAp2jmlBzn1tg==
+
+csstype@^2.6.4:
+  version "2.6.6"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.6.tgz#c34f8226a94bbb10c32cc0d714afdf942291fc41"
+  integrity sha512-RpFbQGUE74iyPgvr46U9t1xoQBM8T4BL8SxrN66Le2xYAPSaDJJKeztV3awugusb3g3G9iL8StmkBBXhcbbXhg==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"

@@ -13,7 +13,13 @@ const ContactForm = ({
 }) => (
   <Flex py={py}>
     <Box flex={1} mr={3}>
-      <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+      <form
+        method="post"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        name="contact"
+        action="/"
+      >
         <Flex flexDirection="column">
           <Heading fontSize={4} pb={3}>
             {children}
@@ -41,6 +47,7 @@ const ContactForm = ({
               fontSize={4}
               css={{
                 width: "100%",
+                cursor: "pointer",
               }}
               type="submit"
             >

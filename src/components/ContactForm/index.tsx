@@ -13,38 +13,42 @@ const ContactForm = ({
 }) => (
   <Flex py={py}>
     <Box flex={1} mr={3}>
-      <Flex flexDirection="column">
-        <Heading fontSize={4} pb={3}>
-          {children}
-        </Heading>
-        <Box flex={1} py={3}>
-          <input
-            className={className}
-            id="name"
-            type="text"
-            placeholder="Full Name"
-          />
-        </Box>
-        <Box flex={1} py={3}>
-          <input
-            className={className}
-            id="email"
-            type="email"
-            placeholder="email@email.com"
-          />
-        </Box>
-        <Box flex={1} py={3}>
-          <Button
-            bg="grey"
-            fontSize={4}
-            css={{
-              width: "100%",
-            }}
-          >
-            Send us an email
-          </Button>
-        </Box>
-      </Flex>
+      <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+        <Flex flexDirection="column">
+          <Heading fontSize={4} pb={3}>
+            {children}
+          </Heading>
+          <Box flex={1} py={3}>
+            <input
+              className={className}
+              id="name"
+              type="text"
+              placeholder="Full Name"
+              name="_replyto"
+            />
+          </Box>
+          <Box flex={1} py={3}>
+            <input
+              className={className}
+              id="email"
+              type="email"
+              placeholder="email@email.com"
+            />
+          </Box>
+          <Box flex={1} py={3}>
+            <Button
+              bg="grey"
+              fontSize={4}
+              css={{
+                width: "100%",
+              }}
+              type="submit"
+            >
+              Send us an email
+            </Button>
+          </Box>
+        </Flex>
+      </form>
     </Box>
   </Flex>
 )
